@@ -30,12 +30,12 @@ function normalizePort(val) {
 
   return false;
 }
-const port = normalizePort(process.env.PORT || '3000');
+const port = normalizePort(process.env.PORT || '3001');
 app.set('port', port);
 
 function startServer() {
     server.listen(port, () => {
-        console.log('server started');
+        console.log('server started', port);
     });
 }
 
